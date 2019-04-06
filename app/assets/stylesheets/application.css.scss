@@ -14,39 +14,31 @@
  *= require_self
  */
  
- 
+ //Typography Styles - fonts selected for <h> tags
  
  h1, h2, h3{
      font-family: 'Open Sans', sans-serif;
-     
  }
- 
+  /* Background gradient - Note that comments can be two forward slashes or asterick slash*/
+  //Both styles of commenting accepted in scss but not css files
  .navbar, .home-callout {
   background-image: linear-gradient( 179.3deg,  rgba(80,161,252,1) 0.3%, rgba(1,98,203,1) 96.9% );
  }
- 
- .navbar-default .navbar-brand {
+ //Nav bar styles - refactores code in scss to allow use of nesting
+ .navbar-default .navbar-brand, .navbar-default .navbar-nav >li >a  {
   color: white;
+  &:hover{
+   color: white;
+   opacity: 0.75;
+  }
  }
  
- .navbar-default .navbar-nav >li >a {
-  color: white;
- }
- 
- .navbar-default .navbar-brand:hover {
-  color: white;
-  opacity: 0.75;
- }
- 
- .navbar-default .navbar-nav >li >a:hover {
-  color: white;
-  opacity: 0.75;
- }
- 
+ //Navbar styles - removed gap between nav bar and header
  .navbar {
  border: none;
  }
  
+ //Home page styles
  .home-callout{
    color:white;
    margin-top: -20px;
